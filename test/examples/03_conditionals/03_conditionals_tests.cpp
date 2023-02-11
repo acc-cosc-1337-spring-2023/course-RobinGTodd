@@ -24,3 +24,17 @@ TEST_CASE("Test get notted result") {
 	REQUIRE(get_notted_result(true)==false);
 	REQUIRE(get_notted_result(false)==true);
 }
+
+TEST_CASE("Test get order of operations", "! && ||") 
+{
+	REQUIRE(get_bool_order_of_ops(true, false, true)==true);
+	REQUIRE(get_bool_order_of_ops(false, true, false)==true);
+	REQUIRE(get_bool_order_of_ops(false, false, false)==false);
+}
+
+TEST_CASE("Verify get is over time function")
+{
+	REQUIRE(get_is_over_time(39)==false);
+	REQUIRE(get_is_over_time(40)==false);
+	REQUIRE(get_is_over_time(41)==true);
+}
