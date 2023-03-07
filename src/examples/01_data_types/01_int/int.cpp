@@ -1,3 +1,9 @@
+#include "int.h"
+
+int echo_variable(int num)
+{
+    return num;
+}
 /*
 Function echo_variable returns the incoming parameter
 
